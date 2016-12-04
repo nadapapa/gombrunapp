@@ -34,6 +34,5 @@ testem.log
 .DS_Store
 Thumbs.db
 
-nativescript/app/app
 nativescript/platforms/android
 nativescript/platforms/ios
