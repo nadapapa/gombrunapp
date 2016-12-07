@@ -12,7 +12,9 @@
     "start.ios": "cd nativescript && tns emulate ios",
     "start.livesync.ios": "cd nativescript && tns livesync ios --emulator --watch",
     "start.android": "cd nativescript && tns emulate android",
-    "start.livesync.android": "cd nativescript && tns livesync android --emulator --watch"
+    "start.livesync.android": "cd nativescript && tns livesync android --emulator --watch",
+    "build-electron": "ng build && cp src/electron/* dist/",
+    "electron": "npm run build-electron && electron dist/"
   },
   "private": true,
   "dependencies": {
