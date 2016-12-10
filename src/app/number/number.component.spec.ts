@@ -19,6 +19,7 @@ describe('NumberComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(NumberComponent);
     component = fixture.componentInstance;
+    component.number = '324353';
     fixture.detectChanges();
   });
 

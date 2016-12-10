@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { RunaComponent } from './runa.component';
+import { NumberComponent } from '../number/number.component';
 
 describe('RunaComponent', () => {
   let component: RunaComponent;
@@ -11,7 +12,7 @@ describe('RunaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RunaComponent ]
+      declarations: [ RunaComponent, NumberComponent ]
     })
     .compileComponents();
   }));
