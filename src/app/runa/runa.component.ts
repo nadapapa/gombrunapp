@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RunaComponent implements OnInit {
 
+  public number: string = '23432534534';
+
   constructor() { }
 
   ngOnInit() {

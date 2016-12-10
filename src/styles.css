@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background: #141414;
+    overflow-y: scroll;
+    color: #FFFFFF;
+    overflow-x: hidden; /* hides the horizontal scroll bar */
+}

@@ -1,0 +1,20 @@
+#gombruna {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: url("/assets/gombruna.gif") no-repeat center center;
+    background-size: auto 100%;
+    height: 80vh;
+}
+
+#texts {
+    height: 0%;
+    width: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color: #FFF;
+    font-size: 4vw;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 14pt;
+}

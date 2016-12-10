@@ -4,11 +4,13 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { RunaComponent } from './runa/runa.component';
+import { NumberComponent } from './number/number.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RunaComponent
+    RunaComponent,
+    NumberComponent
   ],
   imports: [
     BrowserModule,
