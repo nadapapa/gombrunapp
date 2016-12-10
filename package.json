@@ -6,7 +6,8 @@
     "scripts": {
         "start": "ng serve",
         "lint": "tslint \"src/**/*.ts\"",
-        "test": "ng test",
+        "test": "ng test -cc",
+        "test.watch": "ng test -cc -w",
         "pree2e": "webdriver-manager update",
         "e2e": "protractor",
         "start.ios": "cd nativescript && tns emulate ios",

@@ -6,6 +6,4 @@ import { Component } from 'nativescript-ng2-magic';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'app works!';
-}
+export class AppComponent {}

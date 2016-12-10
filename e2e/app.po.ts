@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class GrabovojGombrunaPage {
+export class GombrunappPage {
   navigateTo() {
     return browser.get('/');
   }

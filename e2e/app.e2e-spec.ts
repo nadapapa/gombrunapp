@@ -1,14 +1,9 @@
-import { GrabovojGombrunaPage } from './app.po';
+import { GombrunappPage } from './app.po';
 
 describe('grabovoj-gombruna App', function() {
-  let page: GrabovojGombrunaPage;
+  let page: GombrunappPage;
 
   beforeEach(() => {
-    page = new GrabovojGombrunaPage();
-  });
-
-  it('should display message saying app works', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    page = new GombrunappPage();
   });
 });
