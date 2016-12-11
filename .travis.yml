@@ -4,6 +4,11 @@ language: node_js
 node_js:
   - '6.9'
 
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
 env:
   global:
   - ENCRYPTION_LABEL: "e8dbd5618212"
@@ -25,8 +30,7 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 
 before_script:
-- npm install -g angular-cli
-- npm install
+- yarn global add angular-cli
 - ng build
 
 after_success:
