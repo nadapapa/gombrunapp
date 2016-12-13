@@ -18,7 +18,6 @@
         "noImplicitReturns": true,
         "noImplicitUseStrict": false,
         "noFallthroughCasesInSwitch": true,
-        "outDir": "../dist/out-tsc",
         "typeRoots": [
             "node_modules/@types",
             "node_modules"

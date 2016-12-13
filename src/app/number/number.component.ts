@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component } from 'nativescript-ng2-magic';
+import { OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-number',
@@ -13,7 +14,7 @@ export class NumberComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.chars = this.number.trim().split("");
+    this.chars = this.number.trim().split('');
   }
 
 }

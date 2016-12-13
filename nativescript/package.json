@@ -4,6 +4,9 @@
     "readme": "README",
     "nativescript": {
         "id": "org.nadapapa.gombrunapp",
+        "tns-ios": {
+            "version": "2.3.0"
+        },
         "tns-android": {
             "version": "2.4.1"
         }

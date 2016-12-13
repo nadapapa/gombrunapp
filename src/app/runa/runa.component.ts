@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from 'nativescript-ng2-magic';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-runa',
@@ -11,7 +12,6 @@ export class RunaComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
