@@ -4,6 +4,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { RunaComponent } from './runa/runa.component';
 import { NumberComponent } from './number/number.component';
+import { TextComponent } from './text/text.component';
 import {APP_BASE_HREF} from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
@@ -16,7 +17,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         RunaComponent,
-        NumberComponent
+        NumberComponent,
+        TextComponent
       ],
       imports: [ routerModule ],
       providers: [{provide: APP_BASE_HREF, useValue : '/' }]

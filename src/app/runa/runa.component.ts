@@ -10,6 +10,7 @@ import { OnInit } from '@angular/core';
 export class RunaComponent implements OnInit {
 
   public number: string = '23432534534';
+  public text: string = 'Ide jönnek a Grabovoj számok';
 
   constructor() { }
 

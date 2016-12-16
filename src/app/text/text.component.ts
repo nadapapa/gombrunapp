@@ -1,5 +1,5 @@
 import { Component } from 'nativescript-ng2-magic';
-import { OnInit } from '@angular/core';
+import { OnInit, Input } from '@angular/core';
 
 @Component({
   moduleId: String(module.id),
@@ -8,6 +8,7 @@ import { OnInit } from '@angular/core';
   styleUrls: ['./text.component.css']
 })
 export class TextComponent implements OnInit {
+  @Input() text: string;
 
   constructor() { }
 
