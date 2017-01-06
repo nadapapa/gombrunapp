@@ -9,6 +9,7 @@ import { OnInit, Input } from '@angular/core';
 })
 export class TextComponent implements OnInit {
   @Input() text: string;
+  private fontSize: string = "5vw";
 
   constructor() { }
 
