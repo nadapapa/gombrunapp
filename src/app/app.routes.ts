@@ -1,4 +1,4 @@
-import { RunaComponent } from './runa/runa.component';
+import { RunaComponent } from './components/runa/runa.component';
 
 export const routes: Array<any> = [
     {

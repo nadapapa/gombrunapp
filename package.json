@@ -31,7 +31,6 @@
         "@angular/router": "^3.2.1",
         "core-js": "^2.4.1",
         "enhanced-resolve": "^3.0.0",
-        "nativescript-ng2-magic": "^1.9.0",
         "rxjs": "^5.0.0",
         "ts-helpers": "^1.1.1",
         "zone.js": "^0.7.0"

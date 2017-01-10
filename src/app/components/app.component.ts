@@ -1,4 +1,4 @@
-import { Component } from 'nativescript-ng2-magic';
+import { Component } from '../decorators/magic.component';
 
 @Component({
   moduleId: String(module.id),

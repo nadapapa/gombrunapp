@@ -7,7 +7,7 @@ import { NumberComponent } from './number/number.component';
 import { TextComponent } from './text/text.component';
 import {APP_BASE_HREF} from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { routes } from './app.routes';
+import { routes } from '../app.routes';
 
 let routerModule = RouterModule.forRoot(routes);
 
