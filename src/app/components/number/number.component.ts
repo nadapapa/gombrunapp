@@ -1,6 +1,8 @@
 import { Component } from '../../decorators/magic.component';
 import { OnInit, Input } from '@angular/core';
 
+// TODO nativescript animation currently does not support the changing of the color to the text. find something else.
+
 @Component({
   moduleId: String(module.id),
   selector: 'app-number',
