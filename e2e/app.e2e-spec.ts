@@ -1,9 +1,14 @@
 import { GombrunappPage } from './app.po';
 
-describe('grabovoj-gombruna App', function() {
+describe('gombrunapp App', function() {
   let page: GombrunappPage;
 
   beforeEach(() => {
     page = new GombrunappPage();
+  });
+
+  it('should display message saying app works', () => {
+    page.navigateTo();
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });
