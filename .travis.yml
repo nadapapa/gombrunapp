@@ -4,10 +4,12 @@ language: node_js
 node_js:
   - '6.9'
 
-cache:
-  yarn: true
-  directories:
-    - node_modules
+install: npm install
+
+#cache:
+#  yarn: true
+#  directories:
+#    - node_modules
 
 env:
   global:
