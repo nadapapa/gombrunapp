@@ -24,7 +24,7 @@
     "reflect-metadata": "~0.1.8"
   },
   "devDependencies": {
-    "zone.js": "0.7.6",
+    "zone.js": "0.7.7",
     "nativescript-dev-typescript": "^0.3.2",
     "nativescript-dev-android-snapshot": "0.0.6"
   }
