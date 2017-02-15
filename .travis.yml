@@ -32,8 +32,7 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 
 before_script:
-- yarn global add angular-cli
-- ng build
+- ./node_modules/angular-cli/bin/ng build
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
