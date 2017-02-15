@@ -395,7 +395,7 @@ module.exports = "#number {\n    display:-webkit-box;\n    display:-ms-flexbox;\
 /***/ 609:
 /***/ (function(module, exports) {
 
-module.exports = "#gombruna {\n    display:-webkit-box;\n    display:-ms-flexbox;\n    display:flex;\n    -webkit-box-pack:center;\n        -ms-flex-pack:center;\n            justify-content:center;\n    -webkit-box-align:center;\n        -ms-flex-align:center;\n            align-items:center;\n    background: url(\"assets/gombruna.gif\") no-repeat center center;\n    background-size: 80vmin 80vmin;\n    height: 80vh;\n}\n\n"
+module.exports = "#gombruna {\n    display:-webkit-box;\n    display:-ms-flexbox;\n    display:flex;\n    -webkit-box-pack:center;\n        -ms-flex-pack:center;\n            justify-content:center;\n    -webkit-box-align:center;\n        -ms-flex-align:center;\n            align-items:center;\n    background: url(\"/assets/gombruna.gif\") no-repeat center center;\n    background-size: 80vmin 80vmin;\n    height: 80vh;\n}\n\n"
 
 /***/ }),
 
