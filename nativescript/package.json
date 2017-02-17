@@ -39,7 +39,7 @@
     "nativescript-dev-typescript": "^0.3.2",
     "typescript": "^2.0.2",
     "@types/jasmine": "^2.5.35",
-    "babel-traverse": "6.23.0",
+    "babel-traverse": "6.23.1",
     "babel-types": "6.23.0",
     "babylon": "6.15.0",
     "filewalker": "0.1.3",
