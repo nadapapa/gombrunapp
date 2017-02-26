@@ -14,7 +14,7 @@
   "scripts": {
     "replatform": "tns platform remove android && tns platform add android",
     "android": "npm run replatform && tns deploy android",
-    "emulate": "npm run replatform && tns emulate android"
+    "emulate": "npm run replatform && tns run android "
   },
   "dependencies": {
     "@angular/common": "2.4.8",
