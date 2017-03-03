@@ -2,7 +2,7 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    background: url("/assets/gombruna.gif") no-repeat center center;
+    background: url("assets/gombruna.gif") no-repeat center center;
     background-size: 80vmin 80vmin;
     height: 80vh;
 }
