@@ -1,12 +1,12 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/platform";
 import { NativeScriptRouterModule } from "nativescript-angular";
-import { routes } from './app/app.routes';
+import { routes } from './app.routes';
 
-import { AppComponent } from "./app/components/app.component";
-import { RunaComponent } from './app/components/runa/runa.component';
-import { NumberComponent } from './app/components/number/number.component';
-import { TextComponent } from './app/components/text/text.component';
+import { AppComponent } from "./components/app.component";
+import { RunaComponent } from './components/runa/runa.component';
+import { NumberComponent } from './components/number/number.component';
+import { TextComponent } from './components/text/text.component';
 
 @NgModule({
     declarations: [

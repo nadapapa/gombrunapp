@@ -1,5 +1,4 @@
-import { Component } from '../../decorators/magic.component';
-import { OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   moduleId: String(module.id),
