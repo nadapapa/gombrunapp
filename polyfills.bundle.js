@@ -5829,7 +5829,6 @@ process.umask = function() { return 0; };
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-
 var Zone$1 = (function (global) {
     if (global['Zone']) {
         throw new Error('Zone already loaded.');
@@ -5993,7 +5992,8 @@ var Zone$1 = (function (global) {
                 else {
                     task.runCount = 0;
                     this._updateTaskCount(task, -1);
-                    reEntryGuard && task._transitionTo(notScheduled, running, notScheduled);
+                    reEntryGuard &&
+                        task._transitionTo(notScheduled, running, notScheduled);
                 }
                 _currentZoneFrame = _currentZoneFrame.parent;
                 _currentTask = previousTask;
@@ -6040,9 +6040,9 @@ var Zone$1 = (function (global) {
                 zoneDelegates[i]._updateTaskCount(task.type, count);
             }
         };
-        Zone.__symbol__ = __symbol__;
         return Zone;
     }());
+    Zone.__symbol__ = __symbol__;
     var DELEGATE_ZS = {
         name: '',
         onHasTask: function (delegate, _, target, hasTaskState) {
@@ -6051,9 +6051,7 @@ var Zone$1 = (function (global) {
         onScheduleTask: function (delegate, _, target, task) {
             return delegate.scheduleTask(target, task);
         },
-        onInvokeTask: function (delegate, _, target, task, applyThis, applyArgs) {
-            return delegate.invokeTask(target, task, applyThis, applyArgs);
-        },
+        onInvokeTask: function (delegate, _, target, task, applyThis, applyArgs) { return delegate.invokeTask(target, task, applyThis, applyArgs); },
         onCancelTask: function (delegate, _, target, task) {
             return delegate.cancelTask(target, task);
         }
@@ -6362,7 +6360,7 @@ var Zone$1 = (function (global) {
                 }
             }
             while (_uncaughtPromiseErrors.length) {
-                var _loop_1 = function() {
+                var _loop_1 = function () {
                     var uncaughtPromiseError = _uncaughtPromiseErrors.shift();
                     try {
                         uncaughtPromiseError.zone.runGuarded(function () {
@@ -6655,9 +6653,9 @@ var Zone$1 = (function (global) {
     }
     if (NativePromise) {
         patchThen(NativePromise);
-        var fetch = global['fetch'];
-        if (typeof fetch == 'function') {
-            global['fetch'] = zoneify(fetch);
+        var fetch_1 = global['fetch'];
+        if (typeof fetch_1 == 'function') {
+            global['fetch'] = zoneify(fetch_1);
         }
     }
     // This is not part of public API, but it is usefull for tests, so we expose it.
@@ -6992,7 +6990,7 @@ var Zone$1 = (function (global) {
  * @fileoverview
  * @suppress {undefinedVars,globalThis}
  */
-var zoneSymbol = function (n) { return ("__zone_symbol__" + n); };
+var zoneSymbol = function (n) { return "__zone_symbol__" + n; };
 var _global$1 = typeof window === 'object' && window || typeof self === 'object' && self || global;
 function bindArguments(args, source) {
     for (var i = args.length - 1; i >= 0; i--) {
@@ -7004,7 +7002,7 @@ function bindArguments(args, source) {
 }
 function patchPrototype(prototype, fnNames) {
     var source = prototype.constructor['name'];
-    var _loop_1 = function(i) {
+    var _loop_1 = function (i) {
         var name_1 = fnNames[i];
         var delegate = prototype[name_1];
         if (delegate) {
@@ -7699,7 +7697,7 @@ var unboundKey = zoneSymbol('unbound');
 // for `onwhatever` properties and replace them with zone-bound functions
 // - Chrome (for now)
 function patchViaCapturingAllTheEvents() {
-    var _loop_1 = function(i) {
+    var _loop_1 = function (i) {
         var property = eventNames[i];
         var onproperty = 'on' + property;
         self.addEventListener(property, function (event) {
@@ -7806,7 +7804,7 @@ function patchXHR(window) {
         return pendingTask;
     }
     function scheduleTask(task) {
-        self[XHR_SCHEDULED] = false;
+        XMLHttpRequest[XHR_SCHEDULED] = false;
         var data = task.data;
         // remove existing event listener
         var listener = data.target[XHR_LISTENER];
@@ -7817,7 +7815,7 @@ function patchXHR(window) {
             if (data.target.readyState === data.target.DONE) {
                 // sometimes on some browsers XMLHttpRequest will fire onreadystatechange with
                 // readyState=4 multiple times, so we need to check task state here
-                if (!data.aborted && self[XHR_SCHEDULED] && task.state === 'scheduled') {
+                if (!data.aborted && XMLHttpRequest[XHR_SCHEDULED] && task.state === 'scheduled') {
                     task.invoke();
                 }
             }
@@ -7828,7 +7826,7 @@ function patchXHR(window) {
             data.target[XHR_TASK] = task;
         }
         sendNative.apply(data.target, data.args);
-        self[XHR_SCHEDULED] = true;
+        XMLHttpRequest[XHR_SCHEDULED] = true;
         return task;
     }
     function placeholderCallback() { }
@@ -7892,7 +7890,8 @@ function findPromiseRejectionHandler(evtName) {
 if (_global['PromiseRejectionEvent']) {
     Zone[zoneSymbol('unhandledPromiseRejectionHandler')] =
         findPromiseRejectionHandler('unhandledrejection');
-    Zone[zoneSymbol('rejectionHandledHandler')] = findPromiseRejectionHandler('rejectionhandled');
+    Zone[zoneSymbol('rejectionHandledHandler')] =
+        findPromiseRejectionHandler('rejectionhandled');
 }
 
 /**
