@@ -28,6 +28,6 @@
     "nativescript-dev-android-snapshot": "0.0.7",
     "nativescript-dev-typescript": "^0.3.2",
     "typescript": "^2.2.1",
-    "zone.js": "0.7.7"
+    "zone.js": "0.7.8"
   }
 }
