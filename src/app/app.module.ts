@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
-
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './components/app.component';
 import { RunaComponent } from './components/runa/runa.component';
 import { NumberComponent } from './components/number/number.component';
@@ -18,10 +18,10 @@ let routerModule = RouterModule.forRoot(routes);
     TextComponent
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     routerModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
