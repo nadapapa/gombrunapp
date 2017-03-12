@@ -1,10 +1,11 @@
 webpackJsonp([1,4],{
 
-/***/ 280:
+/***/ 296:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_json_service__ = __webpack_require__(470);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RunaComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -16,28 +17,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var RunaComponent = (function () {
-    function RunaComponent() {
+    function RunaComponent(JsonService) {
+        this.JsonService = JsonService;
         this.number = '23432534534';
         this.text = 'Ide jönnek a Grabovoj számok';
     }
-    RunaComponent.prototype.ngOnInit = function () { };
+    RunaComponent.prototype.ngOnInit = function () {
+        this.JsonService.getData().subscribe(function (val) { return console.log(val); });
+    };
     return RunaComponent;
 }());
 RunaComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* Component */])({
         selector: 'app-runa',
-        template: __webpack_require__(611),
-        styles: [__webpack_require__(607)]
+        template: __webpack_require__(631),
+        styles: [__webpack_require__(627)],
+        providers: [__WEBPACK_IMPORTED_MODULE_1__services_json_service__["a" /* JsonService */]]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_json_service__["a" /* JsonService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_json_service__["a" /* JsonService */]) === "function" && _a || Object])
 ], RunaComponent);
 
+var _a;
 //# sourceMappingURL=/home/travis/build/nadapapa/gombrunapp/src/runa.component.js.map
 
 /***/ }),
 
-/***/ 336:
+/***/ 352:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -46,20 +53,20 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 336;
+webpackEmptyContext.id = 352;
 
 
 /***/ }),
 
-/***/ 337:
+/***/ 353:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(415);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(434);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(451);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(446);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(471);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(465);
 
 
 
@@ -72,18 +79,19 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 446:
+/***/ 465:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(128);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(435);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_routes__ = __webpack_require__(447);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_app_component__ = __webpack_require__(448);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_runa_runa_component__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_number_number_component__ = __webpack_require__(449);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_text_text_component__ = __webpack_require__(450);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(454);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_routes__ = __webpack_require__(466);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_app_component__ = __webpack_require__(467);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_runa_runa_component__ = __webpack_require__(296);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_number_number_component__ = __webpack_require__(468);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_text_text_component__ = __webpack_require__(469);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -91,6 +99,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -108,17 +117,17 @@ var AppModule = (function () {
 AppModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_4__components_app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_5__components_runa_runa_component__["a" /* RunaComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__components_number_number_component__["a" /* NumberComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__components_text_text_component__["a" /* TextComponent */]
+            __WEBPACK_IMPORTED_MODULE_5__components_app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_6__components_runa_runa_component__["a" /* RunaComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__components_number_number_component__["a" /* NumberComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__components_text_text_component__["a" /* TextComponent */]
         ],
         imports: [
+            __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             routerModule
         ],
-        providers: [],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_4__components_app_component__["a" /* AppComponent */]]
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_5__components_app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -126,11 +135,11 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 447:
+/***/ 466:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_runa_runa_component__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_runa_runa_component__ = __webpack_require__(296);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return routes; });
 
 var routes = [
@@ -143,7 +152,7 @@ var routes = [
 
 /***/ }),
 
-/***/ 448:
+/***/ 467:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -164,8 +173,8 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* Component */])({
         selector: 'app-root',
-        template: __webpack_require__(609),
-        styles: [__webpack_require__(605)]
+        template: __webpack_require__(629),
+        styles: [__webpack_require__(625)]
     })
 ], AppComponent);
 
@@ -173,7 +182,7 @@ AppComponent = __decorate([
 
 /***/ }),
 
-/***/ 449:
+/***/ 468:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -189,7 +198,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-// TODO nativescript animation currently does not support the changing of the color to the text. find something else.
 var NumberComponent = (function () {
     function NumberComponent() {
     }
@@ -205,8 +213,8 @@ __decorate([
 NumberComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* Component */])({
         selector: 'app-number',
-        template: __webpack_require__(610),
-        styles: [__webpack_require__(606)]
+        template: __webpack_require__(630),
+        styles: [__webpack_require__(626)]
     }),
     __metadata("design:paramtypes", [])
 ], NumberComponent);
@@ -215,7 +223,7 @@ NumberComponent = __decorate([
 
 /***/ }),
 
-/***/ 450:
+/***/ 469:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -246,8 +254,8 @@ __decorate([
 TextComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* Component */])({
         selector: 'app-text',
-        template: __webpack_require__(612),
-        styles: [__webpack_require__(608)]
+        template: __webpack_require__(632),
+        styles: [__webpack_require__(628)]
     }),
     __metadata("design:paramtypes", [])
 ], TextComponent);
@@ -256,7 +264,52 @@ TextComponent = __decorate([
 
 /***/ }),
 
-/***/ 451:
+/***/ 470:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(636);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JsonService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var JsonService = (function () {
+    function JsonService(http) {
+        this.http = http;
+        this.url = '/assets/texts.json';
+    }
+    JsonService.prototype.getData = function () {
+        return this.getLocalJson();
+    };
+    JsonService.prototype.getLocalJson = function () {
+        return this.http.get(this.url)
+            .map(function (res) { return res.json(); });
+    };
+    return JsonService;
+}());
+JsonService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["p" /* Injectable */])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], JsonService);
+
+var _a;
+//# sourceMappingURL=/home/travis/build/nadapapa/gombrunapp/src/json.service.js.map
+
+/***/ }),
+
+/***/ 471:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -268,69 +321,69 @@ var environment = {
 
 /***/ }),
 
-/***/ 605:
+/***/ 625:
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
-/***/ 606:
+/***/ 626:
 /***/ (function(module, exports) {
 
 module.exports = "#number {\n    display:-webkit-box;\n    display:-ms-flexbox;\n    display:flex;\n    -webkit-box-pack:center;\n        -ms-flex-pack:center;\n            justify-content:center;\n    -webkit-box-align:center;\n        -ms-flex-align:center;\n            align-items:center;\n    font-size: 8vmin;\n}\n\n/*\n Rainbow color text animation\n http://codepen.io/joashp/pen/dYXNwj\n*/\n.color-text-flow span,\n.color-text-flow-hover:hover span {\n    -webkit-animation-name: color-text-flow-keys;\n    animation-name: color-text-flow-keys;\n    -webkit-animation-duration: 10s;\n    animation-duration: 10s;\n    -webkit-animation-iteration-count: infinite;\n    animation-iteration-count: infinite;\n    -webkit-animation-direction: alternate;\n    animation-direction: alternate;\n    -webkit-animation-fill-mode: forwards;\n    animation-fill-mode: forwards;\n}\n@-webkit-keyframes color-text-flow-keys {\n    0% {\n        color: #d65c97;\n    }\n    5% {\n        color: #5cd666;\n    }\n    10% {\n        color: #a55cd6;\n    }\n    15.0% {\n        color: #5c7cd6;\n    }\n    20% {\n        color: #d65c7a;\n    }\n    25% {\n        color: #81d65c;\n    }\n    30.0% {\n        color: #835cd6;\n    }\n    35% {\n        color: #685cd6;\n    }\n    40% {\n        color: #5c9dd6;\n    }\n    45% {\n        color: #5cd670;\n    }\n    50% {\n        color: #d6625c;\n    }\n    55.0% {\n        color: #d6835c;\n    }\n    60.0% {\n        color: #d6605c;\n    }\n    65% {\n        color: #be5cd6;\n    }\n    70% {\n        color: #5c8dd6;\n    }\n    75% {\n        color: #95d65c;\n    }\n    80% {\n        color: #d69d5c;\n    }\n    85.0% {\n        color: #d65c81;\n    }\n    90% {\n        color: #5cd666;\n    }\n    95% {\n        color: #d67e5c;\n    }\n    100% {\n        color: #64d65c;\n    }\n}\n@keyframes color-text-flow-keys {\n    0% {\n        color: #d65c97;\n    }\n    5% {\n        color: #5cd666;\n    }\n    10% {\n        color: #a55cd6;\n    }\n    15.0% {\n        color: #5c7cd6;\n    }\n    20% {\n        color: #d65c7a;\n    }\n    25% {\n        color: #81d65c;\n    }\n    30.0% {\n        color: #835cd6;\n    }\n    35% {\n        color: #685cd6;\n    }\n    40% {\n        color: #5c9dd6;\n    }\n    45% {\n        color: #5cd670;\n    }\n    50% {\n        color: #d6625c;\n    }\n    55.0% {\n        color: #d6835c;\n    }\n    60.0% {\n        color: #d6605c;\n    }\n    65% {\n        color: #be5cd6;\n    }\n    70% {\n        color: #5c8dd6;\n    }\n    75% {\n        color: #95d65c;\n    }\n    80% {\n        color: #d69d5c;\n    }\n    85.0% {\n        color: #d65c81;\n    }\n    90% {\n        color: #5cd666;\n    }\n    95% {\n        color: #d67e5c;\n    }\n    100% {\n        color: #64d65c;\n    }\n}\n.color-text-flow span:nth-of-type(1),\n.color-text-flow-hover:hover span:nth-of-type(1) {\n    -webkit-animation-delay: -19.8s;\n    animation-delay: -19.8s;\n}\n.color-text-flow span:nth-of-type(2),\n.color-text-flow-hover:hover span:nth-of-type(2) {\n    -webkit-animation-delay: -19.6s;\n    animation-delay: -19.6s;\n}\n.color-text-flow span:nth-of-type(3),\n.color-text-flow-hover:hover span:nth-of-type(3) {\n    -webkit-animation-delay: -19.4s;\n    animation-delay: -19.4s;\n}\n.color-text-flow span:nth-of-type(4),\n.color-text-flow-hover:hover span:nth-of-type(4) {\n    -webkit-animation-delay: -19.2s;\n    animation-delay: -19.2s;\n}\n.color-text-flow span:nth-of-type(5),\n.color-text-flow-hover:hover span:nth-of-type(5) {\n    -webkit-animation-delay: -19s;\n    animation-delay: -19s;\n}\n.color-text-flow span:nth-of-type(6),\n.color-text-flow-hover:hover span:nth-of-type(6) {\n    -webkit-animation-delay: -18.8s;\n    animation-delay: -18.8s;\n}\n.color-text-flow span:nth-of-type(7),\n.color-text-flow-hover:hover span:nth-of-type(7) {\n    -webkit-animation-delay: -18.6s;\n    animation-delay: -18.6s;\n}\n.color-text-flow span:nth-of-type(8),\n.color-text-flow-hover:hover span:nth-of-type(8) {\n    -webkit-animation-delay: -18.4s;\n    animation-delay: -18.4s;\n}\n.color-text-flow span:nth-of-type(9),\n.color-text-flow-hover:hover span:nth-of-type(9) {\n    -webkit-animation-delay: -18.2s;\n    animation-delay: -18.2s;\n}\n.color-text-flow span:nth-of-type(10),\n.color-text-flow-hover:hover span:nth-of-type(10) {\n    -webkit-animation-delay: -18s;\n    animation-delay: -18s;\n}\n.color-text-flow span:nth-of-type(11),\n.color-text-flow-hover:hover span:nth-of-type(11) {\n    -webkit-animation-delay: -17.8s;\n    animation-delay: -17.8s;\n}"
 
 /***/ }),
 
-/***/ 607:
+/***/ 627:
 /***/ (function(module, exports) {
 
 module.exports = "#gombruna {\n    display:-webkit-box;\n    display:-ms-flexbox;\n    display:flex;\n    -webkit-box-pack:center;\n        -ms-flex-pack:center;\n            justify-content:center;\n    -webkit-box-align:center;\n        -ms-flex-align:center;\n            align-items:center;\n    background: url(\"assets/gombruna.gif\") no-repeat center center;\n    background-size: 80vmin 80vmin;\n    height: 80vh;\n}\n\n"
 
 /***/ }),
 
-/***/ 608:
+/***/ 628:
 /***/ (function(module, exports) {
 
 module.exports = "#texts {\n    height: 0%;\n    width: 100%;\n    display:-webkit-box;\n    display:-ms-flexbox;\n    display:flex;\n    -webkit-box-pack:center;\n        -ms-flex-pack:center;\n            justify-content:center;\n    -webkit-box-align:center;\n        -ms-flex-align:center;\n            align-items:center;\n    color: #FFF;\n    font-family: Helvetica, Arial, sans-serif;\n    padding: 14pt;\n}"
 
 /***/ }),
 
-/***/ 609:
+/***/ 629:
 /***/ (function(module, exports) {
 
 module.exports = "<router-outlet></router-outlet>\n"
 
 /***/ }),
 
-/***/ 610:
+/***/ 630:
 /***/ (function(module, exports) {
 
 module.exports = "<span class=\"text color-text-flow\" id=\"number\">\n  <span *ngFor=\"let item of chars\">{{item}}</span>\n</span>"
 
 /***/ }),
 
-/***/ 611:
+/***/ 631:
 /***/ (function(module, exports) {
 
 module.exports = "<div id=\"gombruna\">\n  <app-number [number]=\"number\"></app-number>\n</div>\n<app-text [text]=\"text\"></app-text>\n"
 
 /***/ }),
 
-/***/ 612:
+/***/ 632:
 /***/ (function(module, exports) {
 
 module.exports = "<div id=\"texts\" [ngStyle]=\"{'font-size': fontSize}\"><span>{{text}}</span></div>\n"
 
 /***/ }),
 
-/***/ 629:
+/***/ 650:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(337);
+module.exports = __webpack_require__(353);
 
 
 /***/ })
 
-},[629]);
+},[650]);
 //# sourceMappingURL=main.bundle.map
