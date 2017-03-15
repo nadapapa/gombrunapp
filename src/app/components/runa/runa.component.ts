@@ -1,22 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { JsonService } from '../../services/json.service';
+import { FileStorageService } from '../../services/file-storage.service';
+import { RandomGrabovojService } from '../../services/random-grabovoj.service';
+import { GrabovojModel } from '../../models/grabovoj.model';
 
 @Component({
   moduleId: String(module.id),
   selector: 'app-runa',
   templateUrl: './runa.component.html',
   styleUrls: ['./runa.component.css'],
-  providers: [JsonService]
+  providers: [FileStorageService, RandomGrabovojService]
 })
 export class RunaComponent implements OnInit {
+  public grabovoj: GrabovojModel = {number: '', text: ''};
+  private filePath: string = 'assets/texts.json';
+  private interval: number = 5000;
 
-  public number: string = '23432534534';
-  public text: string = 'Ide jönnek a Grabovoj számok';
-
-  constructor(private JsonService : JsonService) { }
+  constructor(
+    private FileStorageService : FileStorageService,
+    private RandomService: RandomGrabovojService
+  ) { }
 
   ngOnInit() {
-    this.JsonService.getData().subscribe(val => console.log(val));
+    this.FileStorageService.setUrl(this.filePath);
+    this.RandomService.getRandomGrabovojInterval(this.FileStorageService, this.interval)
+        .subscribe((grabovoj) => this.grabovoj = grabovoj);
   }
-
 }

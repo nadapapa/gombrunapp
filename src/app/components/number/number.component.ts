@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 
 @Component({
   moduleId: String(module.id),
@@ -6,15 +6,16 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './number.component.html',
   styleUrls: ['./number.component.css']
 })
-export class NumberComponent implements OnInit {
+export class NumberComponent implements OnChanges {
   @Input() number: string;
 
   private chars: Array<string>;
 
-  constructor() { }
-
-  ngOnInit() {
-    this.chars = this.number.trim().split('');
+  ngOnChanges() {
+    this.chars = this.convertStringToArray(this.number);
   }
 
+  private convertStringToArray(string: string) {
+    return string.trim().split('');
+  }
 }

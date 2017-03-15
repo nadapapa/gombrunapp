@@ -1,7 +1,4 @@
-export class GrabovojModel {
-    private number : number;
-    private text : string;
-
-    
-    
+export type GrabovojModel = {
+    number : string;
+    text : string;
 }
