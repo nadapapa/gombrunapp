@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {registerElement} from "nativescript-angular/element-registry";
-registerElement("Gif", () => require("nativescript-gif").Gif);
 
 @Component({
   moduleId: String(module.id),
@@ -25,7 +23,7 @@ export class RunaComponent implements OnInit {
         l = 0;
       }
     }, 30);
-  
+
    }
 
   ngOnInit() {
