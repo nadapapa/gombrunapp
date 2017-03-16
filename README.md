@@ -10,3 +10,23 @@
 
 A Grabovoj-számok forrása: [gyogyitoszamok.hu](http://gyogyitoszamok.hu)  
 A Gömbrúna forrása: [Tudati Életmátrix](http://tudatieletmatrix.com/post/129339644986/agombruna)
+
+## Installation
+### Prerequisities
+- nodejs & npm
+- (optional) angular-cli (or you can use the locally installed version: `./node_modules/angular-cli/bin/ng`)
+- (optional) yarn
+
+### Steps
+1. `git clone https://github.com/nadapapa/gombrunapp.git`
+2. `cd gombrunapp`
+3. `npm install` or `yarn install`
+4. build: 
+    - for development: `ng serve` (also starts a dev server)
+    - for production: `ng build -e prod`
+
+## Tests
+
+Run the tests with `ng test`
+
+
