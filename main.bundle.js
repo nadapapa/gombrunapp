@@ -424,7 +424,7 @@ module.exports = "#gombruna {\n    display:-webkit-box;\n    display:-ms-flexbox
 /***/ 674:
 /***/ (function(module, exports) {
 
-module.exports = "#texts {\n    height: 0%;\n    width: 100%;\n    display:-webkit-box;\n    display:-ms-flexbox;\n    display:flex;\n    -webkit-box-pack:center;\n        -ms-flex-pack:center;\n            justify-content:center;\n    -webkit-box-align:center;\n        -ms-flex-align:center;\n            align-items:center;\n    color: #FFF;\n    font-family: Helvetica, Arial, sans-serif;\n    padding: 14pt;\n}"
+module.exports = "#texts {\n    height: 0%;\n    width: 100%;\n    display:-webkit-box;\n    display:-ms-flexbox;\n    display:flex;\n    -webkit-box-pack:center;\n        -ms-flex-pack:center;\n            justify-content:center;\n    -webkit-box-align:center;\n        -ms-flex-align:center;\n            align-items:center;\n    color: #FFF;\n    font-family: Helvetica, Arial, sans-serif;\n    padding: 14pt;\n    font-size: 8vmin;\n}"
 
 /***/ }),
 
@@ -452,7 +452,7 @@ module.exports = "<div id=\"gombruna\">\n  <app-number [number]=\"grabovoj.numbe
 /***/ 678:
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"texts\" [ngStyle]=\"{'font-size': fontSize}\"><span>{{text}}</span></div>\n"
+module.exports = "<div id=\"texts\"><span>{{text}}</span></div>\n"
 
 /***/ }),
 
