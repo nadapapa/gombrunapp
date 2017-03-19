@@ -250,7 +250,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var TextComponent = (function () {
     function TextComponent() {
-        this.fontSize = "5vw";
     }
     TextComponent.prototype.ngOnInit = function () {
     };
