@@ -3,7 +3,7 @@
   "license": "MIT",
   "readme": "README",
   "nativescript": {
-    "id": "org.nativescript.nativescript",
+    "id": "org.nadapapa.gombrunapp",
     "tns-ios": {
       "version": "2.3.0"
     },

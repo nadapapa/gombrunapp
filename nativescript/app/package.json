@@ -1,6 +1,6 @@
 {
   "nativescript": {
-    "id": "org.nativescript.nativescript"
+    "id": "org.nadapapa.gombrunapp"
   },
   "name": "gombrunapp",
   "main": "main.js",
