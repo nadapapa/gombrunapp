@@ -1,7 +1,9 @@
-#number {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    /*font-size: 8vmin;*/
-    color: #FFF;
+#numberContainer {
+    margin-bottom: 50px;
+}
+
+.numberCharacter {
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
 }

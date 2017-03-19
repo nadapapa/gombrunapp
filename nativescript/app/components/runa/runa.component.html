@@ -1,4 +1,5 @@
-<GridLayout style.backgroundColor="#141414" justifyContent="center" alignItems="center" id="gombruna">
-    <Image src="{{imagePath}}"></Image>
-    <Label text="FAKKA" style.color="white"></Label>
+<GridLayout justifyContent="center" alignItems="center" id="runaContainer">
+    <Image id="runaImage" row="0" src="{{imagePath}}"></Image>
+    <app-number number="{{grabovoj.number}}"></app-number>
+    <app-text text="{{grabovoj.text}}" row="1"></app-text>
 </GridLayout>
