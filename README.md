@@ -1,5 +1,7 @@
 # GömbrúnApp  
 
+[![Szerezd meg: Google Play](https://play.google.com/intl/en_us/badges/images/generic/hu_badge_web_generic.png)](https://play.google.com/store/apps/details?id=org.nadapapa.gombrunapp)  
+
 [![Build Status](https://travis-ci.org/nadapapa/gombrunapp.svg?branch=master)](https://travis-ci.org/nadapapa/gombrunapp)
 [![Code Climate](https://codeclimate.com/github/nadapapa/gombrunapp/badges/gpa.svg)](https://codeclimate.com/github/nadapapa/gombrunapp)
 [![codecov](https://codecov.io/gh/nadapapa/gombrunapp/branch/master/graph/badge.svg)](https://codecov.io/gh/nadapapa/gombrunapp)
