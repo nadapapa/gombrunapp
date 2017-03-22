@@ -3,6 +3,9 @@ import { FileStorageService } from '../../services/file-storage.service';
 import { RandomGrabovojService } from '../../services/random-grabovoj.service';
 import { GrabovojModel } from '../../models/grabovoj.model';
 
+import {registerElement} from "nativescript-angular/element-registry";
+registerElement("VideoPlayer", () => require("nativescript-videoplayer").Video);
+
 @Component({
   moduleId: String(module.id),
   selector: 'app-runa',
@@ -14,24 +17,11 @@ export class RunaComponent implements OnInit {
   public grabovoj: GrabovojModel = {number: '', text: ''};
   private filePath: string = '~/assets/texts.json';
   private interval: number = 5000;
-  private imagePath: string;
 
   constructor(
       private FileStorageService : FileStorageService,
       private RandomService: RandomGrabovojService
-  ) {
-
-    let l = 0;
-
-    setInterval(() => {
-      ++l;
-      this.imagePath = '~/assets/frames/frame_'+l+'_delay-0.03s.gif';
-      if (l === 179) {
-        l = 0;
-      }
-    }, 30);
-
-   }
+  ) { }
 
   ngOnInit() {
     this.FileStorageService.setUrl(this.filePath);

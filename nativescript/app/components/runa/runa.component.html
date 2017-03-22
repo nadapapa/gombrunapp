@@ -1,5 +1,12 @@
 <GridLayout justifyContent="center" alignItems="center" id="runaContainer">
-    <Image id="runaImage" row="0" src="{{imagePath}}"></Image>
+    <VideoPlayer
+            id="runaImage"
+            row="0"
+            src="~/assets/gombruna.mp4"
+            autoplay="true"
+            controls="false"
+            loop="true">
+    </VideoPlayer>
     <app-number number="{{grabovoj.number}}"></app-number>
     <app-text text="{{grabovoj.text}}" row="1"></app-text>
 </GridLayout>
