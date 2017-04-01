@@ -16,7 +16,7 @@ registerElement("VideoPlayer", () => require("nativescript-videoplayer").Video);
 export class RunaComponent implements OnInit {
   public grabovoj: GrabovojModel = {number: '', text: ''};
   private filePath: string = '~/assets/texts.json';
-  private interval: number = 5000;
+  private interval: number = 20000;
 
   constructor(
       private FileStorageService : FileStorageService,
@@ -25,7 +25,6 @@ export class RunaComponent implements OnInit {
 
   ngOnInit() {
     this.FileStorageService.setUrl(this.filePath);
-    // this.FileStorageService.getAll().subscribe((x) => console.log("===============data===================\n",JSON.stringify(x.json())));
     this.RandomService.getRandomGrabovojInterval(this.FileStorageService, this.interval)
         .subscribe((grabovoj) => {this.grabovoj = grabovoj});
   }
